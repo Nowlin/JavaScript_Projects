@@ -1,0 +1,52 @@
+<!DOCTYPE html> <!--Type of document-->
+<!--Entire Webpage-->
+<html lang="en">
+    <!--Global and Meta data container-->
+    <head>
+        <meta charset="utf-8">
+        <script src="JS/main.js"></script>
+    </head>
+    <!--End of Global and Meta data container-->
+    <!--Main webpage container-->
+    <body>
+        <!--Assignment #55-->
+        <p id="Ball_Object"></p>
+        <!--End of Assignment #55-->
+        <!--Assignment #50 Loop-->
+        <p id="Loop"></p>
+        <button onclick="Call_Loop()">Click here to loop the execute!</button>
+        <!--End of Assignment #50 Loop-->
+        <!--Challenge #13-->
+        <p>The length of "Hello World!" is:</p>
+        <p id="Length"></p>
+        <script>
+            let text = "Hello World!";
+            let length = text.length;
+            document.getElementById("Length").innerHTML = length;    
+        </script>
+        <!--End of Challenge #13-->
+        <!--Assignment #51 For Loop-->
+        <p id="List_of_Instruments"></p>
+        <button onclick="for_Loop()">Clicking Here!</button>
+        <!--End of Assignment #51 For Loop-->
+        <!--Assignment #52 'Array Function'-->
+        <p id="Array"></p>
+        <button onclick="array_Function()">Here be the Click!</button>
+        <!--End of Assigntment #52 'Array Function'-->
+        <!--Assignment #53 'Constant Function'-->
+        <p id="Constant"></p>
+        <button onclick="constant_function()">Here Click Please!</button>
+        <!--End of Assignment #53 'Constant Function'-->
+        <!--Challenge #14-->
+        <p id="14"></p>
+        <script>
+            function Challenge_14(){
+                return Math.PI;
+            }
+        document.getElementById("14").innerHTML = Challenge_14();
+        </script>
+        <!--End of Challenge #14-->
+    </body>
+    <!--End of main webpage container-->
+</html>
+<!--End of Entire Webpage-->
