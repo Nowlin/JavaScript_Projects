@@ -23,7 +23,7 @@ function placeXOrO(squareNumber) {
         //squareNumber and activePlayer are concatenated together and added to array.
         selectedSquares.push(squareNumber + activePlayer);
         //This calls a function to check for any win conditions.
-        checkWinCondtions();
+        checkWinConditions();
         //This condition is for changing the active player.
         if (activePlayer === 'X') {
             //If active player is 'X' change it to 'O'.
