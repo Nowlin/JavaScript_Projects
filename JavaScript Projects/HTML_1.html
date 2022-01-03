@@ -1,0 +1,69 @@
+<!--Document type-->
+<!DOCTYPE html>
+<!--End Document type-->
+<!--Entire webpage container and language-->
+<html lang="en">
+<!--Meta and global data-->
+<head>
+    <meta charset="utf-8">
+    <script src="JavaScript/JavaScript_1.js"></script>
+</head>
+<!--End Meta and global data-->
+<!--Body of webpage-->
+<body>
+    <!--Assignment #56-->
+    <h1>What is your favorite color?</h1>
+    <h3>Pick your favorite color from this list</h3>
+    <ul>
+        <li>Green</li>
+        <li>Light Green</li>
+        <li>Dark Green</li>
+        <li>Forest Green</li>
+        <li>Emerald Green</li>
+    </ul>
+    <h3>Enter your choice below:</h3>
+
+    <input id="GREEN" type="text">
+    <button onclick="Green()">Submit Color</button>
+    <p id="Yeah"></p>
+    <!--End of Assignment #56-->
+    <!--Assignment #57-->
+    <h1 class="Dude">We be changing</h1>
+    <h3 class="Dude">We be not changing</h3>
+    <button onclick="Dude_Function()">Dude, Press This!</button>
+    <br><br>
+    <!--End of Assignment #57-->
+    <!--Assignment #58-->
+    <canvas id="DI" width="200" height="100" style="border:5px solid green;"></canvas>
+    <!--End of Assignment #58-->
+    <!--Challenge #16-->
+    <script>
+    var c = document.getElementById("DI");
+    var ctx = c.getContext("2d")
+    // Gradient
+    var grd = ctx.createRadialGradient(78,50,5,90,60,100);
+    grd.addColorStop(0,"green");
+    grd.addColorStop(1,"white");
+    // Fill Gradient
+    ctx.fillStyle = grd;
+    ctx.fillRect(10,10,150,80);
+    </script>
+    <!--End of Challenge #16-->
+    <!--Challenge #17-->
+    <br><br>
+    <canvas id="ID" width="300" height="150" style="border:5px solid lightgreen;"></canvas>
+    <script>
+        var a = document.getElementById("ID");
+        var ctx = a.getContext("2d");
+        var grd = ctx.createLinearGradient(0,0,170,0);
+        grd.addColorStop(0, "black");
+        grd.addColorStop(0.5, "green");
+        grd.addColorStop(1, "white");
+        ctx.fillStyle = grd;
+        ctx.fillRect(20,20,150,100);
+    </script>
+    <!--End of Challenge #17-->
+</body>
+<!--Close of body of webpage-->
+</html>
+<!--Closed entire webpage container-->
