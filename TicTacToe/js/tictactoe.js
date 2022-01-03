@@ -34,7 +34,7 @@ function placeXOrO(squareNumber) {
             activePlayer = 'X';
         }
         //This function plays placement sound.
-        Audio('./media/place.mp3');
+        audio('./media/place.mp3');
         //This condition checks to see if it is computers turn.
         if(activePlayer === 'O'){
             //This function disables clicking for computer choice.
@@ -107,7 +107,7 @@ function checkWinConditions() {
     //and 9 squares are selected, the code executes.
     else if (selectedSquares.length >= 9) {
         //This function plays the tie game sound.
-        Audio('./media/tie.mp3');
+        audio('./media/tie.mp3');
         //This function sets a .3 second timer before resetGame is called.
         setTimeout(function () { resetGame(); }, 1000);
     }
@@ -173,7 +173,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
         //This method sets the width of our line.
         c.lineWidth = 10;
         //This method sets the color of our line.
-        c.strokeStyle = 'rbga(70,255,33,.8)';
+        c.strokeStyle = 'rgba(70,255,33,.8)';
         //This method draws everything we laid out above.
         c.stroke();
         //This condition checks if we've reached the endpoint.
