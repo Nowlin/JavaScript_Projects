@@ -98,7 +98,7 @@ function checkWinConditions() {
     // O 1,4,7 condition
     else if (arrayIncludes('1O','4O','7O')) {drawWinLine(304,50,304,558);}
     // 0 2,5,8 condition.
-    else if (arrayIncludes('20','5O','8O')) {drawWinLine(508,50,508,558);}
+    else if (arrayIncludes('2O','5O','8O')) {drawWinLine(508,50,508,558);}
     // O 6,4,2 condition.
     else if (arrayIncludes('6O','4O','2O')) {drawWinLine(100,508,510,90);}
     // 0 0,4,8 condition.
@@ -210,7 +210,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     animateLineDrawing();
     //This line waits 1 second.
     //Then, clears canvas, resets game, and allows clicking again.
-    setTimeout(function () { clear(); resetGame(); }, 1000);
+    setTimeout(function () { clear(); resetGame(); }, 5000);
 }
 //This function resets the game in a tie or a win.
 function resetGame() {
