@@ -2,7 +2,8 @@
 let activePlayer = 'X';
 //This array stores an array of moves. We use this to determine win conditions.
 let selectedSquares = [];
-
+//Initialize gameover state as false
+let gameover = Boolean(false);
 //This function is for placing an x or o in a square.
 function placeXOrO(squareNumber) {
     //This condition ensures a square hasn't been selected already.
@@ -49,6 +50,12 @@ function placeXOrO(squareNumber) {
 
     //This function results in a random square being selected.
     function computersTurn() {
+        //Check if in Win Condition
+        if (gameover) {
+            console.log("Game Over");
+            console.log(gameover);
+            return;
+        };
         //This boolean is needed for our while loop.
         let success = false;
         //This varialbe stores a random number 0-8
@@ -62,6 +69,9 @@ function placeXOrO(squareNumber) {
             if (placeXOrO(pickASquare)){
                 //This line calls the function.
                 placeXOrO(pickASquare);
+                //log our variables
+                console.log(pickASquare);
+                console.log(gameover);
                 //This changes our boolean and ends the loop.
                 success = true;
             };
@@ -108,6 +118,9 @@ function checkWinConditions() {
     else if (selectedSquares.length >= 9) {
         //This function plays the tie game sound.
         audio('./media/tie.mp3');
+        
+        //set game state as gameover true
+        gameover = Boolean(true);
         //This function sets a .3 second timer before resetGame is called.
         setTimeout(function () { resetGame(); }, 1000);
     }
@@ -141,6 +154,10 @@ function audio(audioURL) {
 }
 //This function utilizes html canvas to draw win lines.
 function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
+    //Log Game over
+    console.log("Game Over");
+    //Set Game Over State
+    gameover = Boolean(true);
     //This line access our html canvas element.
     const canvas = document.getElementById('win-lines');
     //This line gives us access to methods and properties to use on canvas.
@@ -204,6 +221,8 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) {
     }
     //This line disallows clicking while the win sound is playing
     disableClick();
+    //Set Game over state
+    gameover = Boolean(true);
     //This line plays the win sounds.
     audio('./media/winGame.mp3');
     //This line calls our main animation loop.
@@ -223,4 +242,7 @@ function resetGame() {
     }
     //This resets our array so it is empty and we can start over.
     selectedSquares = [];
+    //Reset game state
+    gameover = Boolean(false);
+
 }
